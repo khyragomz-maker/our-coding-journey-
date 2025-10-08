@@ -46,8 +46,9 @@ Through this project, we learned the importance of communication, shared effort,
 
 ---
 
-## 🔗 Live Project
-✨ **View the website here:** [https://khyragomz-maker.github.io/our-coding-journey/](https://khyragomz-maker.github.io/our-coding-journey/)
+## Live Project
+**View the website here:**  
+🔗 [https://khyragomz-maker.github.io/our-coding-journey-/](https://khyragomz-maker.github.io/our-coding-journey-/)
 
 ---
 
