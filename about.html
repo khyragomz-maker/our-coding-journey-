@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Techniques, Examples & Code (Deep)</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brown:#5d4037;
+      --sand:#efe6dc;
+      --card:#fff8f2;
+      --accent:#8d6e63;
+      --muted:#6b4d41;
+    }
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui;
+      background: radial-gradient(circle at 10% 10%, #fff7f0 0%, #f7efe6 30%, #efe2d1 100%);
+      color:var(--muted);
+    }
+
+    header{
+      text-align:center;
+      background: linear-gradient(90deg,var(--brown), #7a4f42);
+      padding:34px 18px;
+      color:white;
+      box-shadow:0 8px 30px rgba(0,0,0,0.16);
+    }
+    header h1{ font-family:'Pacifico',cursive; margin:6px 0; font-size:38px; }
+    header p{ margin:0; font-weight:600; opacity:.95; }
+
+    main{ max-width:1100px; margin:30px auto; padding: 0 18px 60px; }
+
+    section.box{
+      background:var(--card);
+      border-radius:16px;
+      padding:20px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      margin-bottom:22px;
+    }
+
+    h2{ color:var(--brown); margin-top:0; }
+    .lead{ font-family:'Merriweather',serif; font-size:16px; color:#49352f; }
+
+    /* Lists & examples */
+    ul.features{ padding-left:20px; }
+    pre.example{
+      background:#fff2e8;
+      padding:12px;
+      border-radius:8px;
+      overflow:auto;
+      border-left:4px solid var(--accent);
+      font-family:monospace;
+      font-size:13px;
+      color:#3b2d27;
+      margin-top:12px;
+    }
+
+    table.info{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:12px;
+    }
+    table.info th, table.info td{
+      border:2px solid #d9c3b3;
+      padding:10px;
+      text-align:left;
+    }
+    table.info th{
+      background:#f0e1da;
+      color:var(--brown);
+    }
+
+    /* details/summary */
+    details{ margin-top:12px; }
+    summary{ cursor:pointer; font-weight:700; color:var(--brown); }
+
+    nav.bottom{
+      text-align:center; margin-top:18px;
+    }
+    nav.bottom a{
+      display:inline-block;
+      margin:6px 10px;
+      padding:10px 18px;
+      background:var(--brown);
+      color:white; border-radius:10px; text-decoration:none; font-weight:700;
+    }
+
+    @media (max-width:600px){
+      header h1{ font-size:30px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Deep Dive — What We Learned & How We Used It</h1>
+    <p>Technical explanations, code examples, and creative choices.</p>
+  </header>
+
+  <main>
+    <!-- STORY -->
+    <section class="box" aria-labelledby="story">
+      <h2 id="story">Our Learning Story</h2>
+      <p class="lead">We started with curiosity: a single lesson on what HTML tags look like. Over weeks we practiced creating headings, writing paragraphs, inserting images, and crafting small layouts. As assignments grew, we learned to structure pages with semantic tags (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>), style elements using <code>&lt;style&gt;</code> or external CSS, and make pages interactive with forms and media.</p>
+
+      <p>Here we explain the most important elements we used — with sample code and reasons why they matter.</p>
+    </section>
+
+    <!-- ELEMENTS -->
+    <section class="box" aria-labelledby="elements">
+      <h2 id="elements">HTML Elements & Why We Use Them</h2>
+
+      <ul class="features">
+        <li><strong>Headings (<code>&lt;h1&gt;..&lt;h6&gt;</code>):</strong> organize content hierarchy. In our project, <code>&lt;h1&gt;</code> is the page title, <code>&lt;h2&gt;</code> for sections, etc.</li>
+
+        <li><strong>Paragraphs (<code>&lt;p&gt;</code>):</strong> for readable blocks of text — we write reflections and stories inside <code>&lt;p&gt;</code> tags.</li>
+
+        <li><strong>Images (<code>&lt;img&gt;</code>):</strong> show faces and visuals. Always include <code>alt</code> text for accessibility. Example:</li>
+      </ul>
+
+      <pre class="example">&lt;img src="khyra.jpg" alt="Khyra smiling in graduation outfit" width="180"&gt;</pre>
+
+      <p>We put images inside cards, gave them rounded borders, and added captions to describe what they show.</p>
+
+      <details>
+        <summary>Links & Navigation (<code>&lt;a&gt;</code>) — expand to see examples</summary>
+        <p>Links connect pages, external resources, or open email apps. Example: <code>&lt;a href="about.html"&gt;About&lt;/a&gt;</code>. For emails we use <code>mailto</code> (this opens Gmail / default mail client on click):</p>
+        <pre class="example">&lt;a href="mailto:khyragomz@gmail.com"&gt;Email Khyra&lt;/a&gt;</pre>
+      </details>
+
+      <p style="margin-top:12px;"><strong>Lists</strong> are used to group items: ordered lists (<code>&lt;ol&gt;</code>) for steps and unordered lists (<code>&lt;ul&gt;</code>) for bullet points.</p>
+
+      <p style="margin-top:12px;"><strong>Tables</strong> are for structured data (timetables, quick comparisons). We styled tables to be readable and accessible.</p>
+
+      <pre class="example">&lt;table&gt; ... &lt;/table&gt;</pre>
+    </section>
+
+    <!-- CSS -->
+    <section class="box" aria-labelledby="css">
+      <h2 id="css">Design & CSS Techniques</h2>
+      <p class="lead">Design is about readability and emotion. For this project we experimented with:</p>
+      <ul class="features">
+        <li>Font pairing — friendly headings (Pacifico) + readable body (Poppins / Merriweather).</li>
+        <li>Gradients and background textures — to make the page feel warm and inviting.</li>
+        <li>Cards, box-shadow, and rounded corners — for depth and polish.</li>
+        <li>Transitions & hover effects — subtle animations when hovering links and profile cards.</li>
+      </ul>
+
+      <p>Sample CSS snippet we used for card hover effect:</p>
+      <pre class="example">.card { transition: transform .45s, box-shadow .45s; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,.28); }</pre>
+
+      <p>We also learned responsive basics with simple media queries to make pages look good on phones.</p>
+    </section>
+
+    <!-- FORM & INTERACTIVITY -->
+    <section class="box" aria-labelledby="forms">
+      <h2 id="forms">Forms & User Interaction</h2>
+      <p class="lead">Forms let visitors send us messages. Our project uses a simple form (no backend) to show that we know how to build input controls:</p>
+
+      <pre class="example">&lt;form&gt;
+  &lt;label&gt;Name:&lt;/label&gt;
+  &lt;input type="text" name="name" required&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+      <p>We added validation attributes (like <code>required</code>) and proper labels so screen readers can understand the form fields.</p>
+    </section>
+
+    <!-- TABLE EXAMPLE -->
+    <section class="box" aria-labelledby="table">
+      <h2 id="table">Quick Reference Table</h2>
+      <table class="info" aria-describedby="table-desc">
+        <caption id="table-desc" style="caption-side:top; text-align:left; padding-bottom:8px; font-weight:700;">Common tags we used (short description)</caption>
+        <tr><th>Tag</th><th>Purpose</th></tr>
+        <tr><td>&lt;header&gt;</td><td>Top area (site title, nav)</td></tr>
+        <tr><td>&lt;nav&gt;</td><td>Navigation links between pages</td></tr>
+        <tr><td>&lt;main&gt;</td><td>Main content of the page</td></tr>
+        <tr><td>&lt;footer&gt;</td><td>Site credits, contact notes</td></tr>
+      </table>
+    </section>
+
+    <!-- HIDDEN NOTES / EXAMPLES -->
+    <section class="box" aria-labelledby="extras">
+      <h2 id="extras">Extras — Media & Embedded Content</h2>
+      <p class="lead">We also learned to embed media:</p>
+      <ul class="features">
+        <li><strong>Video:</strong> using &lt;video&gt; or iframe to show tutorials or clips.</li>
+        <li><strong>Audio:</strong> sample MP3 with controls.</li>
+        <li><strong>Embedded pages:</strong> using &lt;iframe&gt; for Wikipedia or external references (safe sandboxing recommended).</li>
+      </ul>
+
+      <details>
+        <summary>Sample embed code</summary>
+        <pre class="example">&lt;iframe src="https://www.wikipedia.org" width="560" height="315"&gt;&lt;/iframe&gt;</pre>
+      </details>
+
+      <p style="margin-top:12px;">We used comments (like <code>&lt;!-- note --&gt;</code>) in our code to explain parts to future readers — that’s important in teamwork.</p>
+    </section>
+
+    <nav class="bottom" aria-label="Page actions">
+      <a href="index.html">Back to Home</a>
+      <a href="contact.html">Go to Reflections / Contact</a>
+    </nav>
+  </main>
+  
+<footer style="background: linear-gradient(135deg, #5a3f36, #6d4c41); color: #f5e6d3; padding: 30px 0; text-align:center; box-shadow: 0 -6px 25px rgba(0,0,0,0.3); border-top: 4px solid #a1887f; font-family: 'Poppins', sans-serif;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 18px;">
+    <h2 style="margin:0 0 8px 0; font-size:22px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#f5e6d3; text-shadow: 2px 2px 6px rgba(0,0,0,0.35);">
+      Made with Curiosity & Passion
+    </h2>
+    <p style="margin:0; font-size:16px; font-weight:600; color:#ead2b8;">
+      © 2025 — <strong>Khyra</strong> & <strong>Lean</strong> | Grade 8 — CTECH
+    </p>
+    <p style="margin:4px 0 0 0; font-size:14px; font-style:italic; color:#d9c3a0; letter-spacing:0.5px;">
+      Turning ideas into tiny website worlds with bold design and creativity
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

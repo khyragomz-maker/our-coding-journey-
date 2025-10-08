@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khyra & Lean — Our Coding Journey (Home)</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- ROOT THEME ---------- */
+    :root{
+      --brown-1:#6d4c41;
+      --brown-2:#a1887f;
+      --cream:#f5e6d3;
+      --accent:#8d6e63;
+      --text:#3e2723;
+      --glass: rgba(255,255,255,0.75);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial;
+      background: linear-gradient(135deg,var(--cream), #efe1d6, #ead2b8);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* ---------- HEADER ---------- */
+    header{
+      background: linear-gradient(90deg,var(--brown-1), #5a3f36 60%);
+      color:white;
+      padding:36px 18px;
+      text-align:center;
+      box-shadow:0 8px 30px rgba(0,0,0,0.25);
+    }
+    header h1{
+      margin:6px 0;
+      font-family:'Pacifico',cursive;
+      font-size:40px;
+      letter-spacing:1px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.35);
+    }
+    header p.subtitle{
+      margin:6px 0 0 0;
+      font-weight:600;
+      opacity:0.95;
+    }
+
+    /* ---------- WELCOME MESSAGE ---------- */
+    .welcome {
+      text-align: center;
+      padding: 20px 18px;
+    }
+    .welcome p {
+      font-size: 18px;
+      color: #5b3f36;
+      font-family: 'Merriweather', serif;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    /* ---------- HERO / PROFILES ---------- */
+    .hero{
+      display:flex;
+      gap:28px;
+      justify-content:center;
+      align-items:flex-start;
+      padding:34px 18px 10px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.68));
+      width:320px;
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+      transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .45s;
+      backdrop-filter: blur(6px);
+    }
+    .card:hover{ transform: translateY(-8px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.28); }
+
+    .avatar{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid rgba(109,76,65,0.95);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      margin-bottom:10px;
+    }
+    .name{ font-weight:800; font-size:20px; color:var(--brown-1); }
+    .role{ color:var(--accent); font-weight:600; margin:6px 0; }
+
+    .bio{
+      text-align:left;
+      font-family:'Merriweather',serif;
+      font-size:14px;
+      margin-top:10px;
+      color: #3a2a24;
+    }
+
+    /* ---------- INFO GRID ---------- */
+    .grid{
+      max-width:1100px;
+      margin:28px auto;
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+      padding: 0 18px 60px;
+    }
+    .panel{
+      background: linear-gradient(180deg,#fff,#fff6ed);
+      border-radius:14px;
+      padding:18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .panel h3{ margin:0 0 8px 0; color:var(--brown-1); }
+    .panel p{ margin:0; font-size:14px; color: #3e2c26; }
+
+    /* fancy little tags */
+    .tagline{ font-style:italic; color:#6b4d41; margin-top:10px; display:block; }
+
+    /* CTA NAV */
+    nav.cta{
+      text-align:center;
+      margin:18px 0 60px;
+    }
+    nav.cta a{
+      display:inline-block;
+      text-decoration:none;
+      color:white;
+      background:var(--brown-1);
+      padding:12px 20px;
+      border-radius:28px;
+      margin:6px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      transition:transform .25s, background .25s;
+      font-weight:700;
+    }
+    nav.cta a:hover{ transform:translateY(-4px) scale(1.03); background:var(--accent); }
+
+    /* decorative quote */
+    .quote{
+      max-width:900px;
+      margin: 0 auto 60px;
+      font-family:'Merriweather',serif;
+      font-size:18px;
+      color:#5b3f36;
+      text-align:center;
+      padding: 6px 18px;
+    }
+
+    /* footer */
+    footer{
+      background:linear-gradient(90deg,var(--brown-1), #5a3f36);
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    /* small responsive tweaks */
+    @media (max-width:480px){
+      header h1{ font-size:30px; }
+      .card{ width:92%; }
+      .avatar{ width:140px;height:140px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Khyra & Lean — Our Coding Journey</h1>
+    <p class="subtitle">From curiosity to creation: A Grade 8 story in HTML, CSS & teamwork</p>
+  </header>
+
+  <!-- WELCOME MESSAGE -->
+  <section class="welcome" aria-label="Welcome Message">
+    <p>
+      Welcome! We’re Khyra and Lean, Grade 8 students sharing our journey in coding. Dive in to explore our projects, creativity, and teamwork!
+    </p>
+  </section>
+
+  <section class="hero" aria-labelledby="introductions">
+    <!-- PROFILE 1 -->
+    <article class="card" aria-label="Profile Khyra">
+      <img class="avatar" src="3142.jpg" alt="Photo of Khyra — student, loves brown and K-pop">
+      <div class="name">Khyra</div>
+      <div class="role">Grade 8 STEM B — Creative Coder-in-Training</div>
+      <div class="bio">
+        <p><strong>Quick facts:</strong> I love the color brown for its warmth, I enjoy K-pop, and I get excited learning new tools. Coding for me is a way to combine logic with style and this website is our first attempt to make something beautiful and meaningful.</p>
+      </div>
+    </article>
+
+    <!-- PROFILE 2 -->
+    <article class="card" aria-label="Profile Lean">
+      <img class="avatar" src="MessengerA.jpg" alt="Photo of Lean — student, enjoys math & storytelling">
+      <div class="name">Lean</div>
+      <div class="role">Grade 8 STEM B — Problem Solver</div>
+      <div class="bio">
+        <p><strong>Quick facts:</strong> I enjoy math and telling stories. Working with code taught me patience and gave me a new way to share ideas. Together with Khyra we shaped this project. Experimenting with fonts, colors, and structure until it felt right.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- SHORT STORY / MOTTO -->
+  <p class="quote">“Two students, one idea: turn thoughts into a tiny website world — with brown tones, bold fonts, and lots of heart.”</p>
+
+  <!-- INFO GRID -->
+  <section class="grid" aria-label="What you can find here">
+    <div class="panel">
+      <h3>What this project shows</h3>
+      <p>This site demonstrates our learning: page structure (header, nav, main, footer), content organization, images, links, lists, tables, forms, multimedia embedding, CSS styling and simple interactivity.</p>
+      <span class="tagline">(We learned how small tags can tell big stories.)</span>
+    </div>
+
+    <div class="panel">
+      <h3>Why we chose this design</h3>
+      <p>We used brown and cream tones because they feel warm and approachable. Fonts were chosen to mix friendly handwriting (Pacifico) and readable body text (Poppins / Merriweather for long paragraphs).</p>
+    </div>
+
+    <div class="panel">
+      <h3>Tips for everyone</h3>
+      <p>Open <strong>index.html</strong> first. Click the navigation buttons to move to the Techniques (About) and Reflections (Contact) pages — everything is linked together with clear structure.</p>
+    </div>
+  </section>
+
+  <nav class="cta" role="navigation" aria-label="Primary">
+    <a href="about.html" aria-label="Go to Techniques">Explore Techniques →</a>
+    <a href="contact.html" aria-label="Go to Reflections">See Our Reflections →</a>
+  </nav>
+
+<footer style="background: linear-gradient(135deg, #5a3f36, #6d4c41); color: #f5e6d3; padding: 30px 0; text-align:center; box-shadow: 0 -6px 25px rgba(0,0,0,0.3); border-top: 4px solid #a1887f; font-family: 'Poppins', sans-serif;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 18px;">
+    <h2 style="margin:0 0 8px 0; font-size:22px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#f5e6d3; text-shadow: 2px 2px 6px rgba(0,0,0,0.35);">
+      Made with Curiosity & Passion
+    </h2>
+    <p style="margin:0; font-size:16px; font-weight:600; color:#ead2b8;">
+      © 2025 — <strong>Khyra</strong> & <strong>Lean</strong> | Grade 8 — CTECH
+    </p>
+    <p style="margin:4px 0 0 0; font-size:14px; font-style:italic; color:#d9c3a0; letter-spacing:0.5px;">
+      Turning ideas into tiny website worlds with bold design and creativity
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
